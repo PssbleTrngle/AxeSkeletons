@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.possible_triangle.axe_skeletons.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "${mod_id}-${mod_version}-refmap.json",
+  "mixins": [
+    "SkeletonMixin", "ZombieMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
