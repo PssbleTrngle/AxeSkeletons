@@ -1,5 +1,6 @@
 package com.possible_triangle.axe_skeletons.mixin;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -16,7 +17,7 @@ import java.util.UUID;
 public class ZombieMixin {
 
     @Unique
-    private static final AttributeModifier HEALTH_MODIFIER_BABY = new AttributeModifier(UUID.fromString("75537bd6-4648-484f-9d42-3297d3024e1a"), "Baby health nerf", -0.75, AttributeModifier.Operation.MULTIPLY_BASE);
+    private static final AttributeModifier HEALTH_MODIFIER_BABY = new AttributeModifier(ResourceLocation.withDefaultNamespace("baby_health"), -0.75, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
 
     @Inject(
             method = "setBaby",
